@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  match "/number_checker", to: "pages#number_checker", via: [:get, :post], as: 'number_checker'
 end

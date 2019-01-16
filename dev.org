@@ -1,0 +1,238 @@
+
+```bash
+git add .
+git commit -m "initial commit"
+```
+```result
+: [master (root-commit) f39bd16] initial commit
+:  81 files changed, 1262 insertions(+)
+:  create mode 100644 .gitignore
+:  create mode 100644 .ruby-version
+:  create mode 100644 Gemfile
+:  create mode 100644 Gemfile.lock
+:  create mode 100644 README.md
+:  create mode 100644 Rakefile
+:  create mode 100644 app/assets/config/manifest.js
+:  create mode 100644 app/assets/images/.keep
+:  create mode 100644 app/assets/javascripts/application.js
+:  create mode 100644 app/assets/javascripts/cable.js
+:  create mode 100644 app/assets/javascripts/channels/.keep
+:  create mode 100644 app/assets/stylesheets/application.css
+:  create mode 100644 app/channels/application_cable/channel.rb
+:  create mode 100644 app/channels/application_cable/connection.rb
+:  create mode 100644 app/controllers/application_controller.rb
+:  create mode 100644 app/controllers/concerns/.keep
+:  create mode 100644 app/helpers/application_helper.rb
+:  create mode 100644 app/jobs/application_job.rb
+:  create mode 100644 app/mailers/application_mailer.rb
+:  create mode 100644 app/models/application_record.rb
+:  create mode 100644 app/models/concerns/.keep
+:  create mode 100644 app/views/layouts/application.html.erb
+:  create mode 100644 app/views/layouts/mailer.html.erb
+:  create mode 100644 app/views/layouts/mailer.text.erb
+:  create mode 100755 bin/bundle
+:  create mode 100755 bin/rails
+:  create mode 100755 bin/rake
+:  create mode 100755 bin/setup
+:  create mode 100755 bin/spring
+:  create mode 100755 bin/update
+:  create mode 100755 bin/yarn
+:  create mode 100644 config.ru
+:  create mode 100644 config/application.rb
+:  create mode 100644 config/boot.rb
+:  create mode 100644 config/cable.yml
+:  create mode 100644 config/credentials.yml.enc
+:  create mode 100644 config/database.yml
+:  create mode 100644 config/environment.rb
+:  create mode 100644 config/environments/development.rb
+:  create mode 100644 config/environments/production.rb
+:  create mode 100644 config/environments/test.rb
+:  create mode 100644 config/initializers/application_controller_renderer.rb
+:  create mode 100644 config/initializers/assets.rb
+:  create mode 100644 config/initializers/backtrace_silencers.rb
+:  create mode 100644 config/initializers/content_security_policy.rb
+:  create mode 100644 config/initializers/cookies_serializer.rb
+:  create mode 100644 config/initializers/filter_parameter_logging.rb
+:  create mode 100644 config/initializers/inflections.rb
+:  create mode 100644 config/initializers/mime_types.rb
+:  create mode 100644 config/initializers/wrap_parameters.rb
+:  create mode 100644 config/locales/en.yml
+:  create mode 100644 config/puma.rb
+:  create mode 100644 config/routes.rb
+:  create mode 100644 config/spring.rb
+:  create mode 100644 config/storage.yml
+:  create mode 100644 db/seeds.rb
+:  create mode 100644 dev.org
+:  create mode 100644 lib/assets/.keep
+:  create mode 100644 lib/tasks/.keep
+:  create mode 100644 log/.keep
+:  create mode 100644 package.json
+:  create mode 100644 public/404.html
+:  create mode 100644 public/422.html
+:  create mode 100644 public/500.html
+:  create mode 100644 public/apple-touch-icon-precomposed.png
+:  create mode 100644 public/apple-touch-icon.png
+:  create mode 100644 public/favicon.ico
+:  create mode 100644 public/robots.txt
+:  create mode 100644 storage/.keep
+:  create mode 100644 test/application_system_test_case.rb
+:  create mode 100644 test/controllers/.keep
+:  create mode 100644 test/fixtures/.keep
+:  create mode 100644 test/fixtures/files/.keep
+:  create mode 100644 test/helpers/.keep
+:  create mode 100644 test/integration/.keep
+:  create mode 100644 test/mailers/.keep
+:  create mode 100644 test/models/.keep
+:  create mode 100644 test/system/.keep
+:  create mode 100644 test/test_helper.rb
+:  create mode 100644 tmp/.keep
+:  create mode 100644 vendor/.keep
+```
+
+```bash
+git status
+```
+```result
+: On branch master
+: nothing to commit, working tree clean
+```
+
+```bash
+rails generate controller Pages
+```
+```result
+:       create  app/controllers/pages_controller.rb
+:       invoke  erb
+:       create    test/controllers/pages_controller_test.rb
+:       create      app/assets/stylesheets/pages.scss
+:       invoke  helper
+:       create    app/helpers/pages_helper.rb
+:       invoke    test_unit
+:       invoke  assets
+:       invoke    coffee
+:       create      app/assets/javascripts/pages.coffee
+:       invoke    scss
+:       create    app/views/pages
+:       invoke  test_unit
+```
+
+```bash
+git status
+```
+```result
+: On branch master
+: Untracked files:
+:   (use "git add <file>..." to include in what will be committed)
+:
+: 	app/assets/javascripts/pages.coffee
+: 	app/assets/stylesheets/pages.scss
+: 	app/controllers/pages_controller.rb
+: 	app/helpers/pages_helper.rb
+: 	test/controllers/pages_controller_test.rb
+:
+: nothing added to commit but untracked files present (use "git add" to track)
+```
+
+```bash
+cat app/controllers/pages_controller.rb
+```
+```result
+: class PagesController < ApplicationController
+: end
+```
+```bash
+rails generate -h
+```
+```result
+: Usage: rails generate GENERATOR [args] [options]
+! Running via Spring preloader in process 44315
+:
+: General options:
+:   -h, [--help]     # Print generator's options and usage
+:   -p, [--pretend]  # Run but do not make any changes
+:   -f, [--force]    # Overwrite files that already exist
+:   -s, [--skip]     # Skip files that already exist
+:   -q, [--quiet]    # Suppress status output
+:
+: Please choose a generator below.
+:
+: Rails:
+:   application_record
+:   assets
+:   channel
+:   controller
+:   generator
+:   helper
+:   integration_test
+:   jbuilder
+:   job
+:   mailer
+:   migration
+:   model
+:   resource
+:   scaffold
+:   scaffold_controller
+:   system_test
+:   task
+:
+: ActiveRecord:
+:   active_record:application_record
+:
+: Coffee:
+:   coffee:assets
+:
+: Js:
+:   js:assets
+:
+: TestUnit:
+:   test_unit:generator
+:   test_unit:plugin
+:
+```
+
+```bash
+git add .
+git commit -m 'generates a controller and associated files for Pages'
+```
+```result
+: [master 5191cd6] generates a controller and associated files for Pages
+:  5 files changed, 17 insertions(+)
+:  create mode 100644 app/assets/javascripts/pages.coffee
+:  create mode 100644 app/assets/stylesheets/pages.scss
+:  create mode 100644 app/controllers/pages_controller.rb
+:  create mode 100644 app/helpers/pages_helper.rb
+:  create mode 100644 test/controllers/pages_controller_test.rb
+```
+
+```bash
+git status
+```
+```result
+: On branch master
+: nothing to commit, working tree clean
+```
+
+```rails
+puts nil.to_i
+puts nil.to_i.even?
+puts nil.to_i.odd?
+```
+```result
+: 0
+! Running via Spring preloader in process 44980
+: true
+: false
+```
+
+```bash
+rails routes
+```
+```result
+:                    Prefix Verb     URI Pattern                                                                              Controller#Action
+:            number_checker GET|POST /number_checker(.:format)                                                                pages#number_checker
+:        rails_service_blob GET      /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
+: rails_blob_representation GET      /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
+:        rails_disk_service GET      /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
+: update_rails_disk_service PUT      /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
+:      rails_direct_uploads POST     /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create
+```
